@@ -50,7 +50,10 @@ class LP50(base.Component):
                 self.default_observer
             ),
             base.Input(
-                "Reaches", (attrib.Class("list[int]", 1), attrib.Scales("space/reach", 1)), self.default_observer),
+                "Reaches",
+                (attrib.Class("list[int]", 1), attrib.Scales("space/base_geometry", 1)),
+                self.default_observer
+            ),
             base.Input(
                 "SimulationStart",
                 (attrib.Class(datetime.date, 1), attrib.Scales("global", 1)),
