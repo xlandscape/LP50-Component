@@ -14,6 +14,7 @@ class LP50(base.Component):
     """
     # RELEASES
     VERSION = base.VersionCollection(
+        base.VersionInfo("2.0.3", "2021-08-05"),
         base.VersionInfo("2.0.2", "2021-07-16"),
         base.VersionInfo("2.0.1", "2020-12-03"),
         base.VersionInfo("2.0.0", "2020-10-22"),
@@ -25,6 +26,7 @@ class LP50(base.Component):
     VERSION.changed("2.0.0", "First independent release")
     VERSION.added("2.0.1", "Changelog and release history")
     VERSION.added("2.0.2", ".gitignore")
+    VERSION.changed("2.0.3", "Scale of `Reaches` input")
 
     def __init__(self, name, observer, store):
         super(LP50, self).__init__(name, observer, store)
@@ -50,7 +52,10 @@ class LP50(base.Component):
                 self.default_observer
             ),
             base.Input(
-                "Reaches", (attrib.Class("list[int]", 1), attrib.Scales("space/reach", 1)), self.default_observer),
+                "Reaches",
+                (attrib.Class("list[int]", 1), attrib.Scales("space/base_geometry", 1)),
+                self.default_observer
+            ),
             base.Input(
                 "SimulationStart",
                 (attrib.Class(datetime.date, 1), attrib.Scales("global", 1)),
