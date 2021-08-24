@@ -1,6 +1,16 @@
 # Changelog
 This is the changelog for the LP50 component. It was automatically created on 2021-08-24.
 
+## [2.0.4] - 2021-08-24
+
+### Added
+- Base documentation
+
+### Changed
+
+### Fixed
+
+
 ## [2.0.3] - 2021-08-05
 
 ### Added
