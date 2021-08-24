@@ -14,6 +14,7 @@ class LP50(base.Component):
     """
     # RELEASES
     VERSION = base.VersionCollection(
+        base.VersionInfo("2.0.4", "2021-08-24"),
         base.VersionInfo("2.0.3", "2021-08-05"),
         base.VersionInfo("2.0.2", "2021-07-16"),
         base.VersionInfo("2.0.1", "2020-12-03"),
@@ -21,12 +22,34 @@ class LP50(base.Component):
         base.VersionInfo("1.4.0", None)
     )
 
+    # AUTHORS
+    VERSION.authors.extend((
+        "Sascha Bub (component & module) - sascha.bub@gmx.de",
+        "Thorsten Schad (component) - thorsten.schad@bayer.com",
+        "Hans Baveco (module) - hans.baveco@wur.nl"
+    ))
+
+    # ACKNOWLEDGEMENTS
+    VERSION.acknowledgements.extend((
+        "[data.table](https://cran.r-project.org/web/packages/data.table)",
+        "[NumPy](https://numpy.org)",
+        "[R](https://cran.r-project.org)",
+        "[drc](https://cran.r-project.org/web/packages/drc/index.html)"
+    ))
+
+    # ROADMAP
+    VERSION.roadmap.extend((
+        "Start module GUI in background ([#1](https://gitlab.bayer.com/aqrisk-landscape/lp50-component/-/issues/1))",
+        "Better error handling ([#2](https://gitlab.bayer.com/aqrisk-landscape/lp50-component/-/issues/2))"
+    ))
+
     # CHANGELOG
     VERSION.added("1.4.0", "components.LP50 component")
     VERSION.changed("2.0.0", "First independent release")
     VERSION.added("2.0.1", "Changelog and release history")
     VERSION.added("2.0.2", ".gitignore")
     VERSION.changed("2.0.3", "Scale of `Reaches` input")
+    VERSION.added("2.0.4", "Base documentation")
 
     def __init__(self, name, observer, store):
         super(LP50, self).__init__(name, observer, store)
@@ -35,7 +58,9 @@ class LP50(base.Component):
             base.Input(
                 "ProcessingPath",
                 (attrib.Class(str, 1), attrib.Unit(None, 1), attrib.Scales("global", 1)),
-                self.default_observer
+                self.default_observer,
+                description="""The working directory for the module. It is used for all files prepared as module inputs
+                or generated as (temporary) module outputs."""
             ),
             base.Input(
                 "Values",
@@ -44,40 +69,66 @@ class LP50(base.Component):
                     attrib.Unit("1", 1),
                     attrib.Scales("time/year, space/base_geometry, other/factor", 1)
                 ),
-                self.default_observer
+                self.default_observer,
+                description="The response values to which the regression function is fitted."
             ),
             base.Input(
                 "MultiplicationFactors",
                 (attrib.Class("list[float]", 1), attrib.Unit("1", 1), attrib.Scales("global", 1)),
-                self.default_observer
+                self.default_observer,
+                description="The applied multiplication factors leading to the different [#Values](#Values)."
             ),
             base.Input(
                 "Reaches",
                 (attrib.Class("list[int]", 1), attrib.Scales("space/base_geometry", 1)),
-                self.default_observer
+                self.default_observer,
+                description="""The numeric identifiers for individual reaches (in the order of the [#Values](#Values) 
+                input) that apply scenario-wide."""
             ),
             base.Input(
                 "SimulationStart",
                 (attrib.Class(datetime.date, 1), attrib.Scales("global", 1)),
-                self.default_observer
+                self.default_observer,
+                description="The first time step for which values are provided."
             ),
             base.Input(
                 "MinimumReportValue",
                 (attrib.Class(float, 1), attrib.Scales("global", 1), attrib.Unit("1")),
-                self.default_observer
+                self.default_observer,
+                description="""If no convergence during fitting was achieved because all values were <0.1, this value is
+                reported instead."""
             ),
             base.Input(
                 "MaximumReportValue",
                 (attrib.Class(float, 1), attrib.Scales("global", 1), attrib.Unit("1")),
-                self.default_observer
+                self.default_observer,
+                description="""If no convergence during fitting was achieved because all values were >0.99, this value
+                is reported instead."""
             ),
             base.Input(
                 "ErrorReportValue",
                 (attrib.Class(float, 1), attrib.Scales("global", 1), attrib.Unit("1")),
-                self.default_observer
+                self.default_observer,
+                description="If fitting was not possible because an error occurred, this value is reported."
             )
         ])
-        self._outputs = base.OutputContainer(self, [base.Output("LP50", store, self)])
+        self._outputs = base.OutputContainer(self, [
+            base.Output(
+                "LP50",
+                store,
+                self,
+                {"scales": "time/year, space/base_geometry", "unit": "1"},
+                "The calculated LP50 values.",
+                {
+                    "type": np.ndarray,
+                    "data_type": np.float,
+                    "shape": (
+                        "the same years as the [Values](#Values) input",
+                        "the same reaches as the [Values](#Values) input"
+                    )
+                }
+            )
+        ])
         return
 
     def run(self):
@@ -159,5 +210,5 @@ class LP50(base.Component):
             elif value == -999:
                 value = error_report_value
             lp50[time_index, space_index] = value
-        self._outputs["LP50"].set_values(lp50, scales="time/year, space/base_geometry", unit="1")
+        self._outputs["LP50"].set_values(lp50)
         return
