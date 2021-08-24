@@ -14,6 +14,7 @@ class LP50(base.Component):
     """
     # RELEASES
     VERSION = base.VersionCollection(
+        base.VersionInfo("2.0.4", "2021-08-24"),
         base.VersionInfo("2.0.3", "2021-08-05"),
         base.VersionInfo("2.0.2", "2021-07-16"),
         base.VersionInfo("2.0.1", "2020-12-03"),
@@ -48,6 +49,7 @@ class LP50(base.Component):
     VERSION.added("2.0.1", "Changelog and release history")
     VERSION.added("2.0.2", ".gitignore")
     VERSION.changed("2.0.3", "Scale of `Reaches` input")
+    VERSION.added("2.0.4", "Base documentation")
 
     def __init__(self, name, observer, store):
         super(LP50, self).__init__(name, observer, store)
