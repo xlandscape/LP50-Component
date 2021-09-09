@@ -174,7 +174,7 @@ class LP50(base.Component):
         """
         base.run_process(
             (
-                os.path.join(os.path.dirname(__file__), "R-4.0.3", "bin", "x64", "RScript.exe"),
+                os.path.join(os.path.dirname(__file__), "R-4.1.1", "bin", "x64", "RScript.exe"),
                 "--vanilla",
                 os.path.join(os.path.dirname(__file__), "MarginOfSafety.R"),
                 os.path.join(processing_path, "values.csv"),
