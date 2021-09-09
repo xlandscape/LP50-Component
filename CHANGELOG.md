@@ -1,5 +1,15 @@
 # Changelog
-This is the changelog for the LP50 component. It was automatically created on 2021-08-24.
+This is the changelog for the LP50 component. It was automatically created on 2021-09-09.
+
+## [2.1] - 2021-09-09
+
+### Added
+- Updated runtime environment to R version 4.1.1
+
+### Changed
+
+### Fixed
+
 
 ## [2.0.4] - 2021-08-24
 
