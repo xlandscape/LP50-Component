@@ -14,6 +14,7 @@ class LP50(base.Component):
     """
     # RELEASES
     VERSION = base.VersionCollection(
+        base.VersionInfo("2.1.0", "2021-09-09"),
         base.VersionInfo("2.0.4", "2021-08-24"),
         base.VersionInfo("2.0.3", "2021-08-05"),
         base.VersionInfo("2.0.2", "2021-07-16"),
@@ -39,8 +40,7 @@ class LP50(base.Component):
 
     # ROADMAP
     VERSION.roadmap.extend((
-        "Start module GUI in background ([#1](https://gitlab.bayer.com/aqrisk-landscape/lp50-component/-/issues/1))",
-        "Better error handling ([#2](https://gitlab.bayer.com/aqrisk-landscape/lp50-component/-/issues/2))"
+        "Better error handling ([#2](https://gitlab.bayer.com/aqrisk-landscape/lp50-component/-/issues/2))",
     ))
 
     # CHANGELOG
@@ -50,6 +50,7 @@ class LP50(base.Component):
     VERSION.added("2.0.2", ".gitignore")
     VERSION.changed("2.0.3", "Scale of `Reaches` input")
     VERSION.added("2.0.4", "Base documentation")
+    VERSION.added("2.1.0", "Updated runtime environment to R version 4.1.1")
 
     def __init__(self, name, observer, store):
         super(LP50, self).__init__(name, observer, store)
