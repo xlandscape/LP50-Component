@@ -17,15 +17,15 @@
 ## About the project
 Calculates the LP50 for a margin of safety analysis.  
 This is an automatically generated documentation based on the available code and in-line documentation. The current
-version of this document is from 2021-08-24.  
+version of this document is from 2021-09-09.  
 
 ### Built with
-* Landscape Model core version 1.5.9
+* Landscape Model core version 1.6.3
 * MarginOfSafety R script version 1.1 
 
 
 ## Getting Started
-The component can be used in any Landscape Model based on core version 1.5.9 or newer. See the Landscape Model
+The component can be used in any Landscape Model based on core version 1.6.3 or newer. See the Landscape Model
 core's `README` for general tips on how to add a component to a Landscape Model.
 
 ### Prerequisites
@@ -128,7 +128,6 @@ The physical unit of the values is `1`.
 
 ## Roadmap
 The following changes will be part of future `LP50` versions:
-* Start module GUI in background ([#1](https://gitlab.bayer.com/aqrisk-landscape/lp50-component/-/issues/1))
 * Better error handling ([#2](https://gitlab.bayer.com/aqrisk-landscape/lp50-component/-/issues/2))
 
 
