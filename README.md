@@ -17,15 +17,15 @@
 ## About the project
 Calculates the LP50 for a margin of safety analysis.  
 This is an automatically generated documentation based on the available code and in-line documentation. The current
-version of this document is from 2021-09-09.  
+version of this document is from 2021-09-17.  
 
 ### Built with
-* Landscape Model core version 1.6.3
+* Landscape Model core version 1.7
 * MarginOfSafety R script version 1.1 
 
 
 ## Getting Started
-The component can be used in any Landscape Model based on core version 1.6.3 or newer. See the Landscape Model
+The component can be used in any Landscape Model based on core version 1.7 or newer. See the Landscape Model
 core's `README` for general tips on how to add a component to a Landscape Model.
 
 ### Prerequisites
@@ -79,14 +79,14 @@ Values have to refer to the `time/year, space/base_geometry, other/factor` scale
 
 #### MultiplicationFactors
 The applied multiplication factors leading to the different [#Values](#Values).  
-`MultiplicationFactors` expects its values to be of type `list[float]`.
+`MultiplicationFactors` expects its values to be of type `list`.
 The physical unit of the `MultiplicationFactors` input values is `1`.
 Values have to refer to the `global` scale.
 
 #### Reaches
 The numeric identifiers for individual reaches (in the order of the [#Values](#Values) 
 input) that apply scenario-wide.  
-`Reaches` expects its values to be of type `list[int]`.
+`Reaches` expects its values to be of type `list`.
 Values have to refer to the `space/base_geometry` scale.
 
 #### SimulationStart
