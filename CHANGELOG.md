@@ -1,5 +1,15 @@
 # Changelog
-This is the changelog for the LP50 component. It was automatically created on 2021-09-09.
+This is the changelog for the LP50 component. It was automatically created on 2021-09-17.
+
+## [2.1.1] - 2021-09-17
+
+### Added
+- Make use of generic types for class attributes
+
+### Changed
+
+### Fixed
+
 
 ## [2.1] - 2021-09-09
 

@@ -14,6 +14,7 @@ class LP50(base.Component):
     """
     # RELEASES
     VERSION = base.VersionCollection(
+        base.VersionInfo("2.1.1", "2021-09-17"),
         base.VersionInfo("2.1.0", "2021-09-09"),
         base.VersionInfo("2.0.4", "2021-08-24"),
         base.VersionInfo("2.0.3", "2021-08-05"),
@@ -51,6 +52,7 @@ class LP50(base.Component):
     VERSION.changed("2.0.3", "Scale of `Reaches` input")
     VERSION.added("2.0.4", "Base documentation")
     VERSION.added("2.1.0", "Updated runtime environment to R version 4.1.1")
+    VERSION.added("2.1.1", "Make use of generic types for class attributes")
 
     def __init__(self, name, observer, store):
         super(LP50, self).__init__(name, observer, store)
@@ -75,13 +77,13 @@ class LP50(base.Component):
             ),
             base.Input(
                 "MultiplicationFactors",
-                (attrib.Class("list[float]", 1), attrib.Unit("1", 1), attrib.Scales("global", 1)),
+                (attrib.Class(list[float], 1), attrib.Unit("1", 1), attrib.Scales("global", 1)),
                 self.default_observer,
                 description="The applied multiplication factors leading to the different [#Values](#Values)."
             ),
             base.Input(
                 "Reaches",
-                (attrib.Class("list[int]", 1), attrib.Scales("space/base_geometry", 1)),
+                (attrib.Class(list[int], 1), attrib.Scales("space/base_geometry", 1)),
                 self.default_observer,
                 description="""The numeric identifiers for individual reaches (in the order of the [#Values](#Values) 
                 input) that apply scenario-wide."""
