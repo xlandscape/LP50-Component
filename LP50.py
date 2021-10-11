@@ -161,11 +161,9 @@ class LP50(base.Component):
         with open(os.path.join(processing_path, "values.csv"), "w") as f:
             f.write("year,reach,factor,value\n")
             for index, value in np.ndenumerate(effects):
-                f.write("{},{},{},{}\n".format(
-                    simulation_start.year + index[0],
-                    reaches[index[1]],
-                    multiplication_factors[index[2]],
-                    value)
+                f.write(
+                    f"{simulation_start.year + index[0]},{reaches[index[1]]},{multiplication_factors[index[2]]},"
+                    f"{value}\n"
                 )
         return
 
