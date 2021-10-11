@@ -14,6 +14,7 @@ class LP50(base.Component):
     """
     # RELEASES
     VERSION = base.VersionCollection(
+        base.VersionInfo("2.1.2", "2021-10-11"),
         base.VersionInfo("2.1.1", "2021-09-17"),
         base.VersionInfo("2.1.0", "2021-09-09"),
         base.VersionInfo("2.0.4", "2021-08-24"),
@@ -53,6 +54,7 @@ class LP50(base.Component):
     VERSION.added("2.0.4", "Base documentation")
     VERSION.added("2.1.0", "Updated runtime environment to R version 4.1.1")
     VERSION.added("2.1.1", "Make use of generic types for class attributes")
+    VERSION.added("2.1.2", "Replaced legacy format strings by f-strings")
 
     def __init__(self, name, observer, store):
         super(LP50, self).__init__(name, observer, store)
@@ -161,11 +163,9 @@ class LP50(base.Component):
         with open(os.path.join(processing_path, "values.csv"), "w") as f:
             f.write("year,reach,factor,value\n")
             for index, value in np.ndenumerate(effects):
-                f.write("{},{},{},{}\n".format(
-                    simulation_start.year + index[0],
-                    reaches[index[1]],
-                    multiplication_factors[index[2]],
-                    value)
+                f.write(
+                    f"{simulation_start.year + index[0]},{reaches[index[1]]},{multiplication_factors[index[2]]},"
+                    f"{value}\n"
                 )
         return
 
