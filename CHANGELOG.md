@@ -1,5 +1,15 @@
 # Changelog
-This is the changelog for the LP50 component. It was automatically created on 2021-09-17.
+This is the changelog for the LP50 component. It was automatically created on 2021-10-11.
+
+## [2.1.2] - 2021-10-11
+
+### Added
+- Replaced legacy format strings by f-strings
+
+### Changed
+
+### Fixed
+
 
 ## [2.1.1] - 2021-09-17
 
