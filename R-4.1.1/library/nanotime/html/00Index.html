@@ -1,0 +1,474 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>R: Nanosecond-Resolution Time Support for R</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+<h1> Nanosecond-Resolution Time Support for R
+<img class="toplogo" src="../../../doc/html/Rlogo.svg" alt="[R logo]" />
+</h1>
+<hr/>
+<div style="text-align: center;">
+<a href="../../../doc/html/packages.html"><img class="arrow" src="../../../doc/html/left.jpg" alt="[Up]" /></a>
+<a href="../../../doc/html/index.html"><img class="arrow" src="../../../doc/html/up.jpg" alt="[Top]" /></a>
+</div><h2>Documentation for package &lsquo;nanotime&rsquo; version 0.3.3</h2>
+
+<ul><li><a href="../DESCRIPTION">DESCRIPTION file</a>.</li>
+<li><a href="../doc/index.html">User guides, package vignettes and other documentation.</a></li>
+<li><a href="../demo">Code demos</a>.  Use <a href="../../utils/help/demo">demo()</a> to run them.</li>
+<li><a href="../NEWS">Package NEWS</a>.</li>
+</ul>
+
+<h2>Help Pages</h2>
+
+
+<p style="text-align: center;">
+<a href="# "> </a>
+<a href="#A">A</a>
+<a href="#C">C</a>
+<a href="#F">F</a>
+<a href="#I">I</a>
+<a href="#L">L</a>
+<a href="#M">M</a>
+<a href="#N">N</a>
+<a href="#P">P</a>
+<a href="#R">R</a>
+<a href="#S">S</a>
+<a href="#T">T</a>
+<a href="#U">U</a>
+<a href="#misc">misc</a>
+</p>
+
+<table width="100%">
+<tr><td style="width: 25%;"><a href="nanotime.html">nanotime-package</a></td>
+<td>Nanosecond resolution datetime functionality</td></tr>
+</table>
+
+<h2><a name="A">-- A --</a></h2>
+
+<table width="100%">
+<tr><td style="width: 25%;"><a href="nanoduration.html">abs-method</a></td>
+<td>Duration type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="all.equal.nanoduration.html">all.equal-method</a></td>
+<td>Test if Two Objects are (Nearly) Equal</td></tr>
+<tr><td style="width: 25%;"><a href="all.equal.nanoival.html">all.equal-method</a></td>
+<td>Test if Two Objects are (Nearly) Equal</td></tr>
+<tr><td style="width: 25%;"><a href="all.equal.nanoperiod.html">all.equal-method</a></td>
+<td>Test if Two Objects are (Nearly) Equal</td></tr>
+<tr><td style="width: 25%;"><a href="all.equal.nanotime.html">all.equal-method</a></td>
+<td>Test if Two Objects are (Nearly) Equal</td></tr>
+<tr><td style="width: 25%;"><a href="all.equal.nanoduration.html">all.equal.nanoduration</a></td>
+<td>Test if Two Objects are (Nearly) Equal</td></tr>
+<tr><td style="width: 25%;"><a href="all.equal.nanoival.html">all.equal.nanoival</a></td>
+<td>Test if Two Objects are (Nearly) Equal</td></tr>
+<tr><td style="width: 25%;"><a href="all.equal.nanoperiod.html">all.equal.nanoperiod</a></td>
+<td>Test if Two Objects are (Nearly) Equal</td></tr>
+<tr><td style="width: 25%;"><a href="all.equal.nanotime.html">all.equal.nanotime</a></td>
+<td>Test if Two Objects are (Nearly) Equal</td></tr>
+<tr><td style="width: 25%;"><a href="nanoduration.html">Arith-method</a></td>
+<td>Duration type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanoival.html">Arith-method</a></td>
+<td>Interval type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanotime.html">Arith-method</a></td>
+<td>Nanosecond resolution datetime functionality</td></tr>
+<tr><td style="width: 25%;"><a href="nanoduration.html">as.character-method</a></td>
+<td>Duration type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanoperiod.html">as.character-method</a></td>
+<td>Period type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanotime.html">as.data.frame.nanoduration</a></td>
+<td>Nanosecond resolution datetime functionality</td></tr>
+<tr><td style="width: 25%;"><a href="nanotime.html">as.data.frame.nanotime</a></td>
+<td>Nanosecond resolution datetime functionality</td></tr>
+<tr><td style="width: 25%;"><a href="nanotime.html">as.Date.nanotime</a></td>
+<td>Nanosecond resolution datetime functionality</td></tr>
+<tr><td style="width: 25%;"><a href="nanoduration.html">as.integer64.nanoduration</a></td>
+<td>Duration type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanotime.html">as.integer64.nanotime</a></td>
+<td>Nanosecond resolution datetime functionality</td></tr>
+<tr><td style="width: 25%;"><a href="nanoduration.html">as.nanoduration</a></td>
+<td>Duration type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanoduration.html">as.nanoduration-method</a></td>
+<td>Duration type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanoival.html">as.nanoival</a></td>
+<td>Interval type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanoival.html">as.nanoival-method</a></td>
+<td>Interval type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanoperiod.html">as.nanoperiod</a></td>
+<td>Period type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanoperiod.html">as.nanoperiod-method</a></td>
+<td>Period type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanotime.html">as.nanotime</a></td>
+<td>Nanosecond resolution datetime functionality</td></tr>
+<tr><td style="width: 25%;"><a href="nanotime.html">as.nanotime-method</a></td>
+<td>Nanosecond resolution datetime functionality</td></tr>
+<tr><td style="width: 25%;"><a href="nanotime.html">as.POSIXct.nanotime</a></td>
+<td>Nanosecond resolution datetime functionality</td></tr>
+<tr><td style="width: 25%;"><a href="nanotime.html">as.POSIXlt.nanotime</a></td>
+<td>Nanosecond resolution datetime functionality</td></tr>
+</table>
+
+<h2><a name="C">-- C --</a></h2>
+
+<table width="100%">
+<tr><td style="width: 25%;"><a href="nanoduration.html">c.nanoduration</a></td>
+<td>Duration type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanoival.html">c.nanoival</a></td>
+<td>Interval type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanoperiod.html">c.nanoperiod</a></td>
+<td>Period type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanotime.html">c.nanotime</a></td>
+<td>Nanosecond resolution datetime functionality</td></tr>
+<tr><td style="width: 25%;"><a href="nanoduration.html">Compare-method</a></td>
+<td>Duration type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanoival.html">Compare-method</a></td>
+<td>Interval type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanoperiod.html">Compare-method</a></td>
+<td>Period type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanotime.html">Compare-method</a></td>
+<td>Nanosecond resolution datetime functionality</td></tr>
+<tr><td style="width: 25%;"><a href="nanoduration.html">Complex-method</a></td>
+<td>Duration type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanoival.html">Complex-method</a></td>
+<td>Interval type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanoperiod.html">Complex-method</a></td>
+<td>Period type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanotime.html">Complex-method</a></td>
+<td>Nanosecond resolution datetime functionality</td></tr>
+</table>
+
+<h2><a name="F">-- F --</a></h2>
+
+<table width="100%">
+<tr><td style="width: 25%;"><a href="nanoduration.html">format.nanoduration</a></td>
+<td>Duration type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanoival.html">format.nanoival</a></td>
+<td>Interval type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanoperiod.html">format.nanoperiod</a></td>
+<td>Period type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanotime.html">format.nanotime</a></td>
+<td>Nanosecond resolution datetime functionality</td></tr>
+</table>
+
+<h2><a name="I">-- I --</a></h2>
+
+<table width="100%">
+<tr><td style="width: 25%;"><a href="nanotime.html">index2char.nanotime</a></td>
+<td>Nanosecond resolution datetime functionality</td></tr>
+<tr><td style="width: 25%;"><a href="set_operations.html">intersect-method</a></td>
+<td>Set operations</td></tr>
+<tr><td style="width: 25%;"><a href="set_operations.html">intersect.idx</a></td>
+<td>Set operations</td></tr>
+<tr><td style="width: 25%;"><a href="set_operations.html">intersect.idx-method</a></td>
+<td>Set operations</td></tr>
+<tr><td style="width: 25%;"><a href="nanoduration.html">is.na-method</a></td>
+<td>Duration type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanoival.html">is.na-method</a></td>
+<td>Interval type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanoperiod.html">is.na-method</a></td>
+<td>Period type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanotime.html">is.na-method</a></td>
+<td>Nanosecond resolution datetime functionality</td></tr>
+<tr><td style="width: 25%;"><a href="nanoival.html">is.na&lt;--method</a></td>
+<td>Interval type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanoperiod.html">is.na&lt;--method</a></td>
+<td>Period type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="is.unsorted-nanoival-method.html">is.unsorted-method</a></td>
+<td>Test if a 'nanoival' vector is Not Sorted</td></tr>
+</table>
+
+<h2><a name="L">-- L --</a></h2>
+
+<table width="100%">
+<tr><td style="width: 25%;"><a href="nanoduration.html">Logic-method</a></td>
+<td>Duration type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanoival.html">Logic-method</a></td>
+<td>Interval type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanotime.html">Logic-method</a></td>
+<td>Nanosecond resolution datetime functionality</td></tr>
+</table>
+
+<h2><a name="M">-- M --</a></h2>
+
+<table width="100%">
+<tr><td style="width: 25%;"><a href="nanoduration.html">Math-method</a></td>
+<td>Duration type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanoival.html">Math-method</a></td>
+<td>Interval type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanoperiod.html">Math-method</a></td>
+<td>Period type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanotime.html">Math-method</a></td>
+<td>Nanosecond resolution datetime functionality</td></tr>
+<tr><td style="width: 25%;"><a href="nanoduration.html">Math2-method</a></td>
+<td>Duration type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanoival.html">Math2-method</a></td>
+<td>Interval type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanoperiod.html">Math2-method</a></td>
+<td>Period type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanotime.html">Math2-method</a></td>
+<td>Nanosecond resolution datetime functionality</td></tr>
+<tr><td style="width: 25%;"><a href="nanoduration.html">max-method</a></td>
+<td>Duration type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanotime.html">max-method</a></td>
+<td>Nanosecond resolution datetime functionality</td></tr>
+<tr><td style="width: 25%;"><a href="nanoduration.html">min-method</a></td>
+<td>Duration type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanotime.html">min-method</a></td>
+<td>Nanosecond resolution datetime functionality</td></tr>
+<tr><td style="width: 25%;"><a href="nanoperiod.html">minus</a></td>
+<td>Period type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanoperiod.html">minus-method</a></td>
+<td>Period type with nanosecond precision</td></tr>
+</table>
+
+<h2><a name="N">-- N --</a></h2>
+
+<table width="100%">
+<tr><td style="width: 25%;"><a href="nanoperiod.html">names-method</a></td>
+<td>Period type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanoperiod.html">names&lt;--method</a></td>
+<td>Period type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanotime.html">names&lt;--method</a></td>
+<td>Nanosecond resolution datetime functionality</td></tr>
+<tr><td style="width: 25%;"><a href="nanoduration.html">nanoduration</a></td>
+<td>Duration type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanoduration.html">nanoduration-class</a></td>
+<td>Duration type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanoival.html">nanoival</a></td>
+<td>Interval type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanoival.html">nanoival-class</a></td>
+<td>Interval type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanoival.html">nanoival.end</a></td>
+<td>Interval type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanoival.html">nanoival.end-method</a></td>
+<td>Interval type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanoival.html">nanoival.eopen</a></td>
+<td>Interval type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanoival.html">nanoival.eopen-method</a></td>
+<td>Interval type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanoival.html">nanoival.sopen</a></td>
+<td>Interval type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanoival.html">nanoival.sopen-method</a></td>
+<td>Interval type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanoival.html">nanoival.start</a></td>
+<td>Interval type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanoival.html">nanoival.start-method</a></td>
+<td>Interval type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanoperiod.html">nanoperiod</a></td>
+<td>Period type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanoperiod.html">nanoperiod-class</a></td>
+<td>Period type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanoperiod.month.html">nanoperiod.day</a></td>
+<td>Nanoperiod accessors</td></tr>
+<tr><td style="width: 25%;"><a href="nanoperiod.month.html">nanoperiod.day-method</a></td>
+<td>Nanoperiod accessors</td></tr>
+<tr><td style="width: 25%;"><a href="nanoperiod.month.html">nanoperiod.month</a></td>
+<td>Nanoperiod accessors</td></tr>
+<tr><td style="width: 25%;"><a href="nanoperiod.month.html">nanoperiod.month-method</a></td>
+<td>Nanoperiod accessors</td></tr>
+<tr><td style="width: 25%;"><a href="nanoperiod.month.html">nanoperiod.nanoduration</a></td>
+<td>Nanoperiod accessors</td></tr>
+<tr><td style="width: 25%;"><a href="nanoperiod.month.html">nanoperiod.nanoduration-method</a></td>
+<td>Nanoperiod accessors</td></tr>
+<tr><td style="width: 25%;"><a href="nanotime.html">nanotime</a></td>
+<td>Nanosecond resolution datetime functionality</td></tr>
+<tr><td style="width: 25%;"><a href="nanotime.html">nanotime-class</a></td>
+<td>Nanosecond resolution datetime functionality</td></tr>
+<tr><td style="width: 25%;"><a href="nanotime.html">nanotime-method</a></td>
+<td>Nanosecond resolution datetime functionality</td></tr>
+<tr><td style="width: 25%;"><a href="nanotime.html">nanotime.matrix</a></td>
+<td>Nanosecond resolution datetime functionality</td></tr>
+<tr><td style="width: 25%;"><a href="rounding.html">nano_ceiling</a></td>
+<td>Rounding down or up a 'nanotime' type</td></tr>
+<tr><td style="width: 25%;"><a href="rounding.html">nano_ceiling-method</a></td>
+<td>Rounding down or up a 'nanotime' type</td></tr>
+<tr><td style="width: 25%;"><a href="rounding.html">nano_floor</a></td>
+<td>Rounding down or up a 'nanotime' type</td></tr>
+<tr><td style="width: 25%;"><a href="rounding.html">nano_floor-method</a></td>
+<td>Rounding down or up a 'nanotime' type</td></tr>
+<tr><td style="width: 25%;"><a href="nano_year.html">nano_mday</a></td>
+<td>Get a component of a date time</td></tr>
+<tr><td style="width: 25%;"><a href="nano_year.html">nano_mday-method</a></td>
+<td>Get a component of a date time</td></tr>
+<tr><td style="width: 25%;"><a href="nano_year.html">nano_month</a></td>
+<td>Get a component of a date time</td></tr>
+<tr><td style="width: 25%;"><a href="nano_year.html">nano_month-method</a></td>
+<td>Get a component of a date time</td></tr>
+<tr><td style="width: 25%;"><a href="nano_year.html">nano_wday</a></td>
+<td>Get a component of a date time</td></tr>
+<tr><td style="width: 25%;"><a href="nano_year.html">nano_wday-method</a></td>
+<td>Get a component of a date time</td></tr>
+<tr><td style="width: 25%;"><a href="nano_year.html">nano_year</a></td>
+<td>Get a component of a date time</td></tr>
+<tr><td style="width: 25%;"><a href="nano_year.html">nano_year-method</a></td>
+<td>Get a component of a date time</td></tr>
+<tr><td style="width: 25%;"><a href="nanoduration.html">NA_nanoduration_</a></td>
+<td>Duration type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanoival.html">NA_nanoival_</a></td>
+<td>Interval type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanoperiod.html">NA_nanoperiod_</a></td>
+<td>Period type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanotime.html">NA_nanotime_</a></td>
+<td>Nanosecond resolution datetime functionality</td></tr>
+</table>
+
+<h2><a name="P">-- P --</a></h2>
+
+<table width="100%">
+<tr><td style="width: 25%;"><a href="nanoperiod.html">plus</a></td>
+<td>Period type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanoperiod.html">plus-method</a></td>
+<td>Period type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanoduration.html">print-method</a></td>
+<td>Duration type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanoival.html">print-method</a></td>
+<td>Interval type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanoperiod.html">print-method</a></td>
+<td>Period type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanotime.html">print-method</a></td>
+<td>Nanosecond resolution datetime functionality</td></tr>
+</table>
+
+<h2><a name="R">-- R --</a></h2>
+
+<table width="100%">
+<tr><td style="width: 25%;"><a href="nanoduration.html">range-method</a></td>
+<td>Duration type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanotime.html">range-method</a></td>
+<td>Nanosecond resolution datetime functionality</td></tr>
+<tr><td style="width: 25%;"><a href="rep-nanoduration-method.html">rep-method</a></td>
+<td>Replicate Elements</td></tr>
+<tr><td style="width: 25%;"><a href="rep-nanoival-method.html">rep-method</a></td>
+<td>Replicate Elements</td></tr>
+<tr><td style="width: 25%;"><a href="rep-nanoperiod-method.html">rep-method</a></td>
+<td>Replicate Elements</td></tr>
+<tr><td style="width: 25%;"><a href="rep-nanotime-method.html">rep-method</a></td>
+<td>Replicate Elements</td></tr>
+</table>
+
+<h2><a name="S">-- S --</a></h2>
+
+<table width="100%">
+<tr><td style="width: 25%;"><a href="seq-nanoival-method.html">seq-method</a></td>
+<td>Sequence Generation</td></tr>
+<tr><td style="width: 25%;"><a href="seq.nanotime.html">seq-method</a></td>
+<td>Sequence Generation</td></tr>
+<tr><td style="width: 25%;"><a href="seq.nanoduration.html">seq.nanoduration</a></td>
+<td>Sequence Generation</td></tr>
+<tr><td style="width: 25%;"><a href="seq.nanotime.html">seq.nanotime</a></td>
+<td>Sequence Generation</td></tr>
+<tr><td style="width: 25%;"><a href="set_operations.html">setdiff-method</a></td>
+<td>Set operations</td></tr>
+<tr><td style="width: 25%;"><a href="set_operations.html">setdiff.idx</a></td>
+<td>Set operations</td></tr>
+<tr><td style="width: 25%;"><a href="set_operations.html">setdiff.idx-method</a></td>
+<td>Set operations</td></tr>
+<tr><td style="width: 25%;"><a href="nanoduration.html">show-method</a></td>
+<td>Duration type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanoival.html">show-method</a></td>
+<td>Interval type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanoperiod.html">show-method</a></td>
+<td>Period type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanotime.html">show-method</a></td>
+<td>Nanosecond resolution datetime functionality</td></tr>
+<tr><td style="width: 25%;"><a href="nanoduration.html">sign-method</a></td>
+<td>Duration type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="sort-nanoival-method.html">sort-method</a></td>
+<td>Sorting or Ordering Vectors</td></tr>
+<tr><td style="width: 25%;"><a href="nanoduration.html">sum-method</a></td>
+<td>Duration type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanoduration.html">Summary-method</a></td>
+<td>Duration type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanoival.html">Summary-method</a></td>
+<td>Interval type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanoperiod.html">Summary-method</a></td>
+<td>Period type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanotime.html">Summary-method</a></td>
+<td>Nanosecond resolution datetime functionality</td></tr>
+</table>
+
+<h2><a name="T">-- T --</a></h2>
+
+<table width="100%">
+<tr><td style="width: 25%;"><a href="nanoival.html">t-method</a></td>
+<td>Interval type with nanosecond precision</td></tr>
+</table>
+
+<h2><a name="U">-- U --</a></h2>
+
+<table width="100%">
+<tr><td style="width: 25%;"><a href="set_operations.html">union-method</a></td>
+<td>Set operations</td></tr>
+</table>
+
+<h2><a name="misc">-- misc --</a></h2>
+
+<table width="100%">
+<tr><td style="width: 25%;"><a href="nanoival.html">!=-method</a></td>
+<td>Interval type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanoperiod.html">!=-method</a></td>
+<td>Period type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="set_operations.html">%in%.nanotime</a></td>
+<td>Set operations</td></tr>
+<tr><td style="width: 25%;"><a href="nanoduration.html">*-method</a></td>
+<td>Duration type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanoperiod.html">*-method</a></td>
+<td>Period type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanoduration.html">+-method</a></td>
+<td>Duration type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanoival.html">+-method</a></td>
+<td>Interval type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanoperiod.html">+-method</a></td>
+<td>Period type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanotime.html">+-method</a></td>
+<td>Nanosecond resolution datetime functionality</td></tr>
+<tr><td style="width: 25%;"><a href="nanoduration.html">--method</a></td>
+<td>Duration type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanoival.html">--method</a></td>
+<td>Interval type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanoperiod.html">--method</a></td>
+<td>Period type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanotime.html">--method</a></td>
+<td>Nanosecond resolution datetime functionality</td></tr>
+<tr><td style="width: 25%;"><a href="nanoduration.html">/-method</a></td>
+<td>Duration type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanoperiod.html">/-method</a></td>
+<td>Period type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanoival.html">&lt;-method</a></td>
+<td>Interval type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanoival.html">&lt;=-method</a></td>
+<td>Interval type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanoival.html">==-method</a></td>
+<td>Interval type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanoperiod.html">==-method</a></td>
+<td>Period type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanoival.html">&gt;-method</a></td>
+<td>Interval type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanoival.html">&gt;=-method</a></td>
+<td>Interval type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanoduration.html">[-method</a></td>
+<td>Duration type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanoival.html">[-method</a></td>
+<td>Interval type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanoperiod.html">[-method</a></td>
+<td>Period type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanotime.html">[-method</a></td>
+<td>Nanosecond resolution datetime functionality</td></tr>
+<tr><td style="width: 25%;"><a href="nanoduration.html">[&lt;--method</a></td>
+<td>Duration type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanoival.html">[&lt;--method</a></td>
+<td>Interval type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanoperiod.html">[&lt;--method</a></td>
+<td>Period type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanotime.html">[&lt;--method</a></td>
+<td>Nanosecond resolution datetime functionality</td></tr>
+<tr><td style="width: 25%;"><a href="nanoduration.html">[[-method</a></td>
+<td>Duration type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanoival.html">[[-method</a></td>
+<td>Interval type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanoperiod.html">[[-method</a></td>
+<td>Period type with nanosecond precision</td></tr>
+<tr><td style="width: 25%;"><a href="nanotime.html">[[-method</a></td>
+<td>Nanosecond resolution datetime functionality</td></tr>
+</table>
+</div></body></html>

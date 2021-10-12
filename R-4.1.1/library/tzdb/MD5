@@ -1,4 +1,4 @@
-d98f204e2cf8eeff370ec8283256ffe0 *DESCRIPTION
+e46f2cfb6e91cb7a9a829f8888dab042 *DESCRIPTION
 9f714b1fc5d3c4da0949b67403b30853 *INDEX
 39c808376c4051a18a42033f78e85b41 *LICENSE
 473230fdf9bf5d2fa13b6b806ff1debd *Meta/Rd.rds
@@ -6,7 +6,7 @@ d98f204e2cf8eeff370ec8283256ffe0 *DESCRIPTION
 53079854ec8202fbcdd853f17be52d2f *Meta/hsearch.rds
 701e6d70c19bde2598e7125419d0b5ea *Meta/links.rds
 4cdf620e920834c22b8b4eee3edda160 *Meta/nsInfo.rds
-82dc1c02cab8abf9ed5c5b40da8215bf *Meta/package.rds
+9aac7b046706599fc7244f6b18528c43 *Meta/package.rds
 670988a98f1e943dc85845f5eb62f507 *NAMESPACE
 045a2b2ce2e1a914902a689ff0b3be1a *NEWS.md
 d6c68f1fe41ced6e98a766a3757313da *R/tzdb
@@ -14,9 +14,9 @@ e31633d52ddb8c8a37bbf131888eb128 *R/tzdb.rdb
 d8849d516f0a9f5ab1fb36bf12fe1a1d *R/tzdb.rdx
 47ef25333c9d94558d085fa137d14c67 *help/AnIndex
 e7103080822fcef99f30d6f8794cf02a *help/aliases.rds
-f3a0d8d6c6740c3164732bfa06b8152f *help/paths.rds
-edd11c6bdeceee08872713c085d44f55 *help/tzdb.rdb
-7401315371b0f586c519caf4349fe82f *help/tzdb.rdx
+f8151b37269600237b585327de209ff7 *help/paths.rds
+7106653838f6ce72759d93b853b343cc *help/tzdb.rdb
+41d77a484228c04d20fcbdd9de202780 *help/tzdb.rdx
 7a0e91abff1ba9ae5a912ec7b3d6d5c3 *html/00Index.html
 b6763e6916890c631fdc3f2643803b1a *html/R.css
 17782665d3a7dfe6aa7a03b5a605abf8 *include/date/chrono_io.h
@@ -38,10 +38,10 @@ b79b797780618c75e6987da2722c1520 *include/tzdb/ptz.h
 1faab029dbadac16fab2a770abaf77ea *include/tzdb/solar_hijri.h
 9519a720bd6d0d0b26dfa91c9b6d82c1 *include/tzdb/tz.h
 28b669883ac0a3c475572efc228e8e03 *include/tzdb/tzdb.h
-3537dd350cd7a5ea6db88bd49a7bb68f *libs/i386/symbols.rds
-10ed2378cd0982e614ee827526c5b7ce *libs/i386/tzdb.dll
-e5588042495554f337c5c0d577ebda13 *libs/x64/symbols.rds
-a9e814cf13b573f18809e42dad8e4c2d *libs/x64/tzdb.dll
+25afca8aefaa4fb22fc38f3318c5a78f *libs/i386/symbols.rds
+3818325e4f6fc43f7f734c4452c34ba5 *libs/i386/tzdb.dll
+b2eb49d20082c04b6bf459141016aee4 *libs/x64/symbols.rds
+30e4e147afea9d719148f4bd41f093fb *libs/x64/tzdb.dll
 6ba40471fffd2b212016d9a949bf682d *tzdata/CONTRIBUTING
 c679c9d6b02bc2757b3eaf8f53c43fba *tzdata/LICENSE
 7fc97502221f23a56ef9ba7a80b96dcc *tzdata/Makefile

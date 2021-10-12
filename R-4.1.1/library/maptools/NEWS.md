@@ -1,4 +1,10 @@
-# Version 1.1-1 (development, rev. 381-382)
+# Please note that **maptools** will be retired by the end of 2023, plan transition at your earliest convenience; some functionality will be moved to **sp**.
+
+# Version 1.1-2 (development, rev. 392-397)
+
+* Version check for forthcoming GEOS 3.10
+
+# Version 1.1-1 (2021-03-15, rev. 381-391)
 
 * Upgrade **spatstat**-family reverse dependencies
 

@@ -1,0 +1,26 @@
+all.equal.nanoduration
+                        Test if Two Objects are (Nearly) Equal
+all.equal.nanoival      Test if Two Objects are (Nearly) Equal
+all.equal.nanoperiod    Test if Two Objects are (Nearly) Equal
+all.equal.nanotime      Test if Two Objects are (Nearly) Equal
+intersect,nanoival,nanoival-method
+                        Set operations
+is.unsorted,nanoival-method
+                        Test if a 'nanoival' vector is Not Sorted
+nano_ceiling            Rounding down or up a 'nanotime' type
+nano_wday               Get a component of a date time
+nanoduration-class      Duration type with nanosecond precision
+nanoival-class          Interval type with nanosecond precision
+nanoperiod-class        Period type with nanosecond precision
+nanoperiod.month,nanoperiod-method
+                        Nanoperiod accessors
+nanotime-class          Nanosecond resolution datetime functionality
+rep,nanoduration-method
+                        Replicate Elements
+rep,nanoival-method     Replicate Elements
+rep,nanoperiod-method   Replicate Elements
+rep,nanotime-method     Replicate Elements
+seq,nanoival-method     Sequence Generation
+seq.nanoduration        Sequence Generation
+seq.nanotime            Sequence Generation
+sort,nanoival-method    Sorting or Ordering Vectors

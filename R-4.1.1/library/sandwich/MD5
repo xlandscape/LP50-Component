@@ -1,5 +1,5 @@
 7d1b2d2907e2273691a5da013975cde0 *CITATION
-86f10d1ffa84e2d1ec3a4373ca167196 *DESCRIPTION
+4c9974c1aae0415b1aefd3cbd1fbec4f *DESCRIPTION
 0a839ade891d6f0d0a79a9a746e263e8 *INDEX
 fa692735646e48204c74619e6d878d0f *Meta/Rd.rds
 4b3eb2b3136d9b1fa6593bc82e579239 *Meta/data.rds
@@ -7,7 +7,7 @@ fa692735646e48204c74619e6d878d0f *Meta/Rd.rds
 53affa825a8cd079c7be2f0fa03ba542 *Meta/hsearch.rds
 602b36297bcb5c14a9376f9b84c16ef8 *Meta/links.rds
 d22d07e3923acbc25ebc52d7988c40d3 *Meta/nsInfo.rds
-9ca06b04694d7d5a22ccbc9e168fccf3 *Meta/package.rds
+6bec27cd89a895bda355ad6d4bc6f1ca *Meta/package.rds
 5b2747892c5224a52a4677a57daa049a *Meta/vignette.rds
 c4bd85c0fbd18b8aeddd9c47cd623bd4 *NAMESPACE
 72f134b6f8d63701419c3dcceab1f73e *NEWS.md
@@ -33,8 +33,8 @@ b4015c0cd0f68c34f3c3039caeed7b60 *doc/sim-CL.rda
 966d3076bb97b6ae964c536d8c18b044 *help/AnIndex
 17b02f30f0244ac17d394e4f457e15cd *help/aliases.rds
 d505965f04192e62106d4cf2100455fd *help/figures/README-sandwich.svg
-349b3b35751b8ebf41885dba247f0f97 *help/paths.rds
-e0b51413912e439f76c1f335755b3606 *help/sandwich.rdb
-7eda2d2137dfd28429e2792a860174d9 *help/sandwich.rdx
+8d5b831a3aa6f7740c412624afa7bb1e *help/paths.rds
+6997d5f614835355df5190ea16774e69 *help/sandwich.rdb
+2208e52ac1c7fba4ace2d4d1ea9b1469 *help/sandwich.rdx
 53cd8a43022d728aa0e55ea8391f4946 *html/00Index.html
 b6763e6916890c631fdc3f2643803b1a *html/R.css

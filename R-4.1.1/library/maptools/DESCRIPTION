@@ -1,6 +1,6 @@
 Package: maptools
-Version: 1.1-1
-Date: 2021-03-14
+Version: 1.1-2
+Date: 2021-09-07
 Title: Tools for Handling Spatial Objects
 Authors@R: c(
 	person("Roger", "Bivand", role = c("cre", "aut"), email = "Roger.Bivand@nhh.no", comment=c(ORCID="0000-0003-2392-6140")),
@@ -44,13 +44,13 @@ Suggests: rgeos (>= 0.1-8), spatstat.geom (>= 1.65-0), PBSmapping,
         maps, RColorBrewer, raster, polyclip, plotrix, spatstat.linnet
         (>= 1.65-3), spatstat.utils (>= 1.19.0), spatstat (>= 2.0-0)
 Enhances: gpclib
-Description: Set of tools for manipulating geographic data. It includes binary access to 'GSHHG' shoreline files. The package also provides interface wrappers for exchanging spatial objects with packages such as 'PBSmapping', 'spatstat.geom', 'maps', and others.
+Description: Please note that 'maptools' will be retired by the end of 2023, plan transition at your earliest convenience; some functionality will be moved to 'sp'. Set of tools for manipulating geographic data. It includes binary access to 'GSHHG' shoreline files. The package also provides interface wrappers for exchanging spatial objects with packages such as 'PBSmapping', 'spatstat.geom', 'maps', and others.
 License: GPL (>= 2)
 URL: http://maptools.r-forge.r-project.org/,
-        http://r-forge.r-project.org/projects/maptools/
+        https://r-forge.r-project.org/projects/maptools/
 RoxygenNote: 6.1.1
 NeedsCompilation: yes
-Packaged: 2021-03-14 10:19:52 UTC; rsb
+Packaged: 2021-09-07 14:49:47 UTC; rsb
 Author: Roger Bivand [cre, aut] (<https://orcid.org/0000-0003-2392-6140>),
   Nicholas Lewin-Koh [aut],
   Edzer Pebesma [ctb],
@@ -86,6 +86,6 @@ Author: Roger Bivand [cre, aut] (<https://orcid.org/0000-0003-2392-6140>),
   Rolf Turner [ctb]
 Maintainer: Roger Bivand <Roger.Bivand@nhh.no>
 Repository: CRAN
-Date/Publication: 2021-03-15 10:20:02 UTC
-Built: R 4.1.1; x86_64-w64-mingw32; 2021-09-03 14:52:01 UTC; windows
+Date/Publication: 2021-09-07 16:00:02 UTC
+Built: R 4.1.1; x86_64-w64-mingw32; 2021-10-05 16:16:40 UTC; windows
 Archs: i386, x64
