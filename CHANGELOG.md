@@ -1,5 +1,15 @@
 # Changelog
-This is the changelog for the LP50 component. It was automatically created on 2021-10-11.
+This is the changelog for the LP50 component. It was automatically created on 2021-10-12.
+
+## [2.2] - 2021-10-12
+
+### Added
+
+### Changed
+
+### Fixed
+- Added missing R-package dependencies
+
 
 ## [2.1.2] - 2021-10-11
 

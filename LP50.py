@@ -14,6 +14,7 @@ class LP50(base.Component):
     """
     # RELEASES
     VERSION = base.VersionCollection(
+        base.VersionInfo("2.2.0", "2021-10-12"),
         base.VersionInfo("2.1.2", "2021-10-11"),
         base.VersionInfo("2.1.1", "2021-09-17"),
         base.VersionInfo("2.1.0", "2021-09-09"),
@@ -55,6 +56,7 @@ class LP50(base.Component):
     VERSION.added("2.1.0", "Updated runtime environment to R version 4.1.1")
     VERSION.added("2.1.1", "Make use of generic types for class attributes")
     VERSION.added("2.1.2", "Replaced legacy format strings by f-strings")
+    VERSION.fixed("2.2.0", "Added missing R-package dependencies")
 
     def __init__(self, name, observer, store):
         super(LP50, self).__init__(name, observer, store)
