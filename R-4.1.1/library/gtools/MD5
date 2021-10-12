@@ -1,5 +1,5 @@
 75c40aa58ce61c005172af9dad043d5a *ChangeLog
-3477a4c89049612f3696ca6cb37ef8b4 *DESCRIPTION
+fb5d810922de7222aa47a5f324a764bb *DESCRIPTION
 486bef88b2415283c75a58556e2391af *INDEX
 454df23cf492f42549481d0d6e69710e *Meta/Rd.rds
 5d0d8ee5209d776cc11f963efa575a5f *Meta/data.rds
@@ -7,7 +7,7 @@
 539d0f22b09fe58f56c119ea0bfd37d7 *Meta/hsearch.rds
 56db594fe4d9528d7becaf5c5697a4f7 *Meta/links.rds
 07d2e800e4c3ac8c3662c4c9b8a6e1b0 *Meta/nsInfo.rds
-c843bad0c3100aa659be470ce946f078 *Meta/package.rds
+ad606afdc77049688335f37babbedd2e *Meta/package.rds
 e85fcfb5185a7bc0eb4d69f81b87ec8d *NAMESPACE
 7d6712607e0ae039d8023280bd5dec6c *NEWS.md
 d6c68f1fe41ced6e98a766a3757313da *R/gtools
@@ -19,12 +19,12 @@ d2d2d0444a049d74694203974624835c *data/ELISA.rda
 fc8e98012e32300d6e4e9f75804d1f92 *help/AnIndex
 24d2a34a38795a0f7818f86e969bed83 *help/aliases.rds
 32cb276b6dcaf4f2afe9e06868a42cfa *help/figures/README-pressure-1.png
-2d8beaa321c87760ec5c9a16dc686cb2 *help/gtools.rdb
-137659dba82278b40a4369bcca830f9a *help/gtools.rdx
-fa2763336485f20603ae6016db624d2b *help/paths.rds
+831be906c9247a1190cd81e80baed3e9 *help/gtools.rdb
+94e2c339b0c8d91115da2f2fb80ce279 *help/gtools.rdx
+e74d2c9de05f482eaf8ba94b68d6737a *help/paths.rds
 3d0fdb079a2f897f0de7d5cfec313031 *html/00Index.html
 b6763e6916890c631fdc3f2643803b1a *html/R.css
-2c0e76db41e22ba49d3d8136d3d5edff *libs/i386/gtools.dll
+9cfbc017c052a091ac56f5d38a182d43 *libs/i386/gtools.dll
 4f5b365275ca05da3747e07c4eefd598 *libs/i386/symbols.rds
-7354a9d36d18d6966dc26c66aad86698 *libs/x64/gtools.dll
+4570a423e8777f31785b3acf0090fb18 *libs/x64/gtools.dll
 9bc577d0e83d29bd338f1883c6031cc4 *libs/x64/symbols.rds

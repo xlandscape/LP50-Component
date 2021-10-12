@@ -1,4 +1,4 @@
-2d6571e6cfc7871aa7ab2748749aa5ac *DESCRIPTION
+26df17c77cffdc13ee14dcff3aed5530 *DESCRIPTION
 b52c27ea6bcb3c9afd25eba9e547304a *INDEX
 10390b90ea27c186e1fe37138085bd25 *LICENSE
 bd9cbd22d994e7cc7ac2132b20445a1a *Meta/Rd.rds
@@ -6,14 +6,14 @@ bd9cbd22d994e7cc7ac2132b20445a1a *Meta/Rd.rds
 86b1bc602a8696b41bc28c054387eec1 *Meta/hsearch.rds
 76865998309642c0c427eab07c688d43 *Meta/links.rds
 240876511852cccb2d57dd8f7f888a64 *Meta/nsInfo.rds
-470f607bf198adc727a0456c147fbc56 *Meta/package.rds
+be34fd77913e61c0d207d35e6b3e3088 *Meta/package.rds
 be86fd64a1aba1c918bf723cd00efbfd *Meta/vignette.rds
 ff81711a18add7f7bf31e469bbd51149 *NAMESPACE
 115915c497c01042ddadda86b83db3e7 *NEWS.md
 d6c68f1fe41ced6e98a766a3757313da *R/broom
 7b499ae7eeeb8f7fc69e8abdc67925a1 *R/broom.rdb
 2a456751cbb78930bb1ac330b93da660 *R/broom.rdx
-d4334772a896eb5c4ee076cfc9aed7d3 *R/sysdata.rdb
+c06526b3ab986a11ab17f2ffda488fad *R/sysdata.rdb
 740bd8c85e69bfbe2644d3229e3e9093 *R/sysdata.rdx
 6c16ca1f712870a2941d9f08fac784da *WORDLIST
 c0a8e96bce9fe6d4d67efff00f4fd551 *doc/adding-tidiers.Rmd
@@ -35,9 +35,9 @@ f6bd7233294809d0bfcd8eb4b6085cd6 *doc/broom_and_dplyr.Rmd
 fc738c9fa8fa5cd44885d1b2eb530526 *doc/kmeans.html
 f825ac579238ef5cb022bf5ca4ae326e *help/AnIndex
 d34ef9b8bdd478894e8e5132ab6c357e *help/aliases.rds
-441d113556998fb7dae3993bff6d627c *help/broom.rdb
-9395eac7009f579f99745a9c71868bb0 *help/broom.rdx
+b5a6a6b4f1dde9de10393f0c3fb3c58b *help/broom.rdb
+223ee89a459f9fccd6f3aae1006fa9aa *help/broom.rdx
 0dee9824ab0579527a569ed5db162467 *help/figures/logo.png
-439400cfc2c8305eea058b7d30ece9d5 *help/paths.rds
+aeeb9bdb3a82e76f3e7e162374101373 *help/paths.rds
 730f46c03244801372709d51950921bc *html/00Index.html
 b6763e6916890c631fdc3f2643803b1a *html/R.css

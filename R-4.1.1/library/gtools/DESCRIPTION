@@ -39,5 +39,5 @@ NeedsCompilation: yes
 Packaged: 2021-06-03 15:27:57 UTC; warnes
 Repository: CRAN
 Date/Publication: 2021-06-06 10:00:02 UTC
-Built: R 4.1.1; x86_64-w64-mingw32; 2021-09-03 13:09:17 UTC; windows
+Built: R 4.1.1; x86_64-w64-mingw32; 2021-10-05 16:15:55 UTC; windows
 Archs: i386, x64
