@@ -1,5 +1,16 @@
 # Changelog
-This is the changelog for the LP50 component. It was automatically created on 2021-10-12.
+This is the changelog for the LP50 component. It was automatically created on 2021-10-19.
+
+## [2.2.2] - 2021-10-19
+
+### Added
+
+### Changed
+- Switched to Google-style docstrings
+
+### Fixed
+- Specified R library path
+
 
 ## [2.2.1] - 2021-10-12
 
