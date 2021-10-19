@@ -10,6 +10,7 @@ class LP50(base.Component):
     """Calculates the LP50 for a margin of safety analysis."""
     # RELEASES
     VERSION = base.VersionCollection(
+        base.VersionInfo("2.2.2", "2021-10-19"),
         base.VersionInfo("2.2.1", "2021-10-12"),
         base.VersionInfo("2.2.0", "2021-10-12"),
         base.VersionInfo("2.1.2", "2021-10-11"),
@@ -39,9 +40,7 @@ class LP50(base.Component):
     ))
 
     # ROADMAP
-    VERSION.roadmap.extend((
-        "Better error handling ([#2](https://gitlab.bayer.com/aqrisk-landscape/lp50-component/-/issues/2))",
-    ))
+    VERSION.roadmap.extend(())
 
     # CHANGELOG
     VERSION.added("1.4.0", "components.LP50 component")
@@ -55,6 +54,8 @@ class LP50(base.Component):
     VERSION.added("2.1.2", "Replaced legacy format strings by f-strings")
     VERSION.fixed("2.2.0", "Added missing R-package dependencies")
     VERSION.fixed("2.2.1", "Added further missing R-package dependencies")
+    VERSION.fixed("2.2.2", "Specified R library path")
+    VERSION.changed("2.2.2", "Switched to Google-style docstrings")
 
     def __init__(self, name, observer, store):
         """
