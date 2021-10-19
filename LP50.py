@@ -1,6 +1,4 @@
-"""
-Landscape Model component of the LP50 module.
-"""
+"""Landscape Model component of the LP50 module."""
 import numpy as np
 import os
 import base
@@ -9,9 +7,7 @@ import datetime
 
 
 class LP50(base.Component):
-    """
-    Calculates the LP50 for a margin of safety analysis.
-    """
+    """Calculates the LP50 for a margin of safety analysis."""
     # RELEASES
     VERSION = base.VersionCollection(
         base.VersionInfo("2.2.1", "2021-10-12"),
@@ -61,6 +57,14 @@ class LP50(base.Component):
     VERSION.fixed("2.2.1", "Added further missing R-package dependencies")
 
     def __init__(self, name, observer, store):
+        """
+        Initializes a LP50 component.
+
+        Args:
+            name: The name of the component.
+            observer: The default observer of the component.
+            store: The default store of the component.
+        """
         super(LP50, self).__init__(name, observer, store)
         self._module = base.Module("MarginOfSafety R script", "1.1")
         self._inputs = base.InputContainer(self, [
@@ -143,7 +147,9 @@ class LP50(base.Component):
     def run(self):
         """
         Runs the component.
-        :return: Nothing.
+
+        Returns:
+            Nothing.
         """
         processing_path = self._inputs["ProcessingPath"].read().values
         reaches = np.array(self._inputs["Reaches"].read().values)
@@ -156,10 +162,14 @@ class LP50(base.Component):
     def prepare_module_inputs(self, processing_path, reaches, simulation_start):
         """
         Prepares the input data required by the LP50 module.
-        :param: processing_path: The working directory used by the module.
-        :param: reaches: The identifiers of the reaches being processed.
-        :param: simulation_start: The first day of the simulation.
-        :return: Nothing.
+
+        Args:
+            processing_path: The working directory used by the module.
+            reaches: The identifiers of the reaches being processed.
+            simulation_start: The first day of the simulation.
+
+        Returns:
+            Nothing.
         """
         os.makedirs(processing_path)
         effects = self._inputs["Values"].read().values
@@ -176,8 +186,12 @@ class LP50(base.Component):
     def run_module(self, processing_path):
         """
         Runs the module.
-        :param: processing_path: The working directory of the module.
-        :return: Nothing.
+
+        Args:
+            processing_path: The working directory of the module.
+
+        Returns:
+            Nothing.
         """
         base.run_process(
             (
@@ -188,17 +202,22 @@ class LP50(base.Component):
                 os.path.join(processing_path, "lp50.csv")
             ),
             processing_path,
-            self.default_observer
+            self.default_observer,
+            {"R_LIBS_USER": os.path.join(os.path.dirname(__file__), "R-4.1.1", "library")}
         )
         return
 
     def read_module_outputs(self, processing_path, reaches, simulation_start):
         """
         Reads the module's outputs and stores them in the Landscape model store.
-        :param: processing_path: The working directory of the module.
-        :param: reaches: The identifiers of the reaches considered.
-        :param: simulation_start: The first day of the simulation.
-        :return: Nothing.
+
+        Args:
+            processing_path: The working directory of the module.
+            reaches: The identifiers of the reaches considered.
+            simulation_start: The first day of the simulation.
+
+        Returns:
+            Nothing.
         """
         minimum_report_value = self._inputs["MinimumReportValue"].read().values
         maximum_report_value = self._inputs["MaximumReportValue"].read().values
