@@ -87,19 +87,6 @@ class LP50(base.Component):
                 description="The response values to which the regression function is fitted."
             ),
             base.Input(
-                "MultiplicationFactors",
-                (attrib.Class(list[float], 1), attrib.Unit("1", 1), attrib.Scales("global", 1)),
-                self.default_observer,
-                description="The applied multiplication factors leading to the different [#Values](#Values)."
-            ),
-            base.Input(
-                "Reaches",
-                (attrib.Class(list[int], 1), attrib.Scales("space/base_geometry", 1)),
-                self.default_observer,
-                description="""The numeric identifiers for individual reaches (in the order of the [#Values](#Values) 
-                input) that apply scenario-wide."""
-            ),
-            base.Input(
                 "SimulationStart",
                 (attrib.Class(datetime.date, 1), attrib.Scales("global", 1)),
                 self.default_observer,
@@ -153,9 +140,9 @@ class LP50(base.Component):
             Nothing.
         """
         processing_path = self._inputs["ProcessingPath"].read().values
-        reaches = np.array(self._inputs["Reaches"].read().values)
+        reaches = self.inputs["Values"].describe()["element_names"][1]
         simulation_start = self._inputs["SimulationStart"].read().values
-        self.prepare_module_inputs(processing_path, reaches, simulation_start)
+        self.prepare_module_inputs(processing_path, reaches.get_values(), simulation_start)
         self.run_module(processing_path)
         self.read_module_outputs(processing_path, reaches, simulation_start)
         return
@@ -174,7 +161,7 @@ class LP50(base.Component):
         """
         os.makedirs(processing_path)
         effects = self._inputs["Values"].read().values
-        multiplication_factors = self._inputs["MultiplicationFactors"].read().values
+        multiplication_factors = self.inputs["Values"].describe()["element_names"][2].get_values()
         with open(os.path.join(processing_path, "values.csv"), "w") as f:
             f.write("year,reach,factor,value\n")
             for index, value in np.ndenumerate(effects):
@@ -224,11 +211,12 @@ class LP50(base.Component):
         maximum_report_value = self._inputs["MaximumReportValue"].read().values
         error_report_value = self._inputs["ErrorReportValue"].read().values
         lp50 = np.zeros((self._inputs["Values"].describe()["shape"][:2]))
+        reach_ids = list(reaches.get_values())
         with open(os.path.join(processing_path, "lp50.csv")) as f:
             data = f.readlines()
         for record in [x[:-1].split(",") for x in data[1:]]:
             time_index = simulation_start.year - int(record[0])
-            space_index = np.argwhere(reaches == int(record[1]))[0][0]
+            space_index = reach_ids.index(int(record[1]))
             value = float(record[2])
             if value == -997:
                 value = minimum_report_value
@@ -237,5 +225,5 @@ class LP50(base.Component):
             elif value == -999:
                 value = error_report_value
             lp50[time_index, space_index] = value
-        self._outputs["LP50"].set_values(lp50)
+        self._outputs["LP50"].set_values(lp50, element_names=(None, reaches))
         return
