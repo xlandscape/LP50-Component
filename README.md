@@ -17,15 +17,15 @@
 ## About the project
 Calculates the LP50 for a margin of safety analysis.  
 This is an automatically generated documentation based on the available code and in-line documentation. The current
-version of this document is from 2021-10-19.  
+version of this document is from 2021-11-18.  
 
 ### Built with
-* Landscape Model core version 1.9.3
+* Landscape Model core version 1.10
 * MarginOfSafety R script version 1.1 
 
 
 ## Getting Started
-The component can be used in any Landscape Model based on core version 1.9.3 or newer. See the Landscape
+The component can be used in any Landscape Model based on core version 1.10 or newer. See the Landscape
 Model core's `README` for general tips on how to add a component to a Landscape Model.
 
 ### Prerequisites
@@ -44,22 +44,20 @@ The following gives a sample configuration of the `LP50` component. See [inputs]
 ```xml
 <IndEffect_LP50_StepsRiverNetwork_SD_Species1 module="LP50" class="LP50" enabled_expression="'$(RunStepsRiverNetwork)'
 == 'true' and '$(RunLGuts)' == 'true'">
-    <ProcessingPath>
+    <ProcessingPath scales="global">
 $(_MCS_BASE_DIR_)\$(_MC_NAME_)\processing\effect\ind_lp50_steps_sd_$(Species1)
     </ProcessingPath>
-    <Values>
-<FromOutput component="IndEffect_StepsRiverNetwork_SD_Species1" output="GutsSurvivalReaches" />
-    </Values>
-<MultiplicationFactors type="list[float]" unit="1">$(MultiplicationFactors)</MultiplicationFactors>
-    <Reaches>
-<FromOutput component="IndEffect_StepsRiverNetwork_SD_Species1" output="Reaches" />
-    </Reaches>
-    <SimulationStart
-type="date">$(SimulationStart)</SimulationStart>
-    <MinimumReportValue type="float" unit="1">0</MinimumReportValue>
-<MaximumReportValue type="float" unit="1">100</MaximumReportValue>
-    <ErrorReportValue type="float"
-unit="1">-99</ErrorReportValue>
+    <Values
+scales="global">
+        <FromOutput component="IndEffect_StepsRiverNetwork_SD_Species1" output="GutsSurvivalReaches" />
+</Values>
+    <SimulationStart type="date" scales="global">$(SimulationStart)</SimulationStart>
+    <MinimumReportValue
+type="float" unit="1" scales="global">0</MinimumReportValue>
+    <MaximumReportValue type="float" unit="1"
+scales="global">100</MaximumReportValue>
+    <ErrorReportValue type="float" unit="1"
+scales="global">-99</ErrorReportValue>
 </IndEffect_LP50_StepsRiverNetwork_SD_Species1>
 ```
 
@@ -76,18 +74,6 @@ The response values to which the regression function is fitted.
 `Values` expects its values to be of type `ndarray`.
 The physical unit of the `Values` input values is `1`.
 Values have to refer to the `time/year, space/base_geometry, other/factor` scale.
-
-#### MultiplicationFactors
-The applied multiplication factors leading to the different [#Values](#Values).  
-`MultiplicationFactors` expects its values to be of type `list`.
-The physical unit of the `MultiplicationFactors` input values is `1`.
-Values have to refer to the `global` scale.
-
-#### Reaches
-The numeric identifiers for individual reaches (in the order of the [#Values](#Values) 
-input) that apply scenario-wide.  
-`Reaches` expects its values to be of type `list`.
-Values have to refer to the `space/base_geometry` scale.
 
 #### SimulationStart
 The first time step for which values are provided.  
