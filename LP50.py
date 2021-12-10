@@ -228,5 +228,5 @@ class LP50(base.Component):
             elif value == -999:
                 value = error_report_value
             lp50[time_index, space_index] = value
-        self._outputs["LP50"].set_values(lp50, element_names=(None, reaches))
+        self._outputs["LP50"].set_values(lp50, element_names=(None, reaches), offset=(simulation_start.year, None))
         return
