@@ -10,6 +10,7 @@ class LP50(base.Component):
     """Calculates the LP50 for a margin of safety analysis."""
     # RELEASES
     VERSION = base.VersionCollection(
+        base.VersionInfo("2.2.4", "2021-12-10"),
         base.VersionInfo("2.2.3", "2021-11-18"),
         base.VersionInfo("2.2.2", "2021-10-19"),
         base.VersionInfo("2.2.1", "2021-10-12"),
@@ -59,6 +60,7 @@ class LP50(base.Component):
     VERSION.changed("2.2.2", "Switched to Google-style docstrings")
     VERSION.changed("2.2.3", "Removed multiplication factor and reaches inputs")
     VERSION.changed("2.2.3", "Reports element names of outputs")
+    VERSION.changed("2.2.4", "Specifies offset of outputs")
 
     def __init__(self, name, observer, store):
         """
@@ -228,5 +230,5 @@ class LP50(base.Component):
             elif value == -999:
                 value = error_report_value
             lp50[time_index, space_index] = value
-        self._outputs["LP50"].set_values(lp50, element_names=(None, reaches))
+        self._outputs["LP50"].set_values(lp50, element_names=(None, reaches), offset=(simulation_start.year, None))
         return

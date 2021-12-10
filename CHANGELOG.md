@@ -1,5 +1,15 @@
 # Changelog
-This is the changelog for the LP50 component. It was automatically created on 2021-11-18.
+This is the changelog for the LP50 component. It was automatically created on 2021-12-10.
+
+## [2.2.4] - 2021-12-10
+
+### Added
+
+### Changed
+- Specifies offset of outputs
+
+### Fixed
+
 
 ## [2.2.3] - 2021-11-18
 
