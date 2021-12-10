@@ -17,15 +17,15 @@
 ## About the project
 Calculates the LP50 for a margin of safety analysis.  
 This is an automatically generated documentation based on the available code and in-line documentation. The current
-version of this document is from 2021-11-18.  
+version of this document is from 2021-12-10.  
 
 ### Built with
-* Landscape Model core version 1.10
+* Landscape Model core version 1.11
 * MarginOfSafety R script version 1.1 
 
 
 ## Getting Started
-The component can be used in any Landscape Model based on core version 1.10 or newer. See the Landscape
+The component can be used in any Landscape Model based on core version 1.11 or newer. See the Landscape
 Model core's `README` for general tips on how to add a component to a Landscape Model.
 
 ### Prerequisites
