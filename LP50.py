@@ -72,7 +72,7 @@ class LP50(base.Component):
             store: The default store of the component.
         """
         super(LP50, self).__init__(name, observer, store)
-        self._module = base.Module("MarginOfSafety R script", "1.1")
+        self._module = base.Module("R", "4.1.1", "R-4.1.1", "R-4.1.1/doc", None)
         self._inputs = base.InputContainer(self, [
             base.Input(
                 "ProcessingPath",
