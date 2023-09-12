@@ -19,3 +19,9 @@ base.documentation.write_changelog(
 )
 base.documentation.write_contribution_notes(
     os.path.join(root_folder, "..", "variant", "LP50", "CONTRIBUTING.md"))
+base.documentation.write_repository_info(
+    os.path.join(root_folder, "..", "variant", "LP50"),
+    os.path.join(root_folder, "..", "variant", "LP50", "repository.json"),
+    os.path.join(root_folder, "..", "..", "..", "versions.json"),
+    "component"
+)

@@ -1,6 +1,20 @@
 # Changelog
 
-This is the changelog for the LP50 component. It was automatically created on 2023-09-11.
+This is the changelog for the LP50 component. It was automatically created on 2023-09-12.
+
+## [2.2.6] - 2023-09-12
+
+### Added
+
+- Creation of repository info during documentation
+
+- Repository info to R runtime environment
+
+### Changed
+
+- Extended module information for R runtime environment
+
+### Fixed
 
 ## [2.2.5] - 2023-09-11
 
