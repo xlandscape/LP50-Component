@@ -10,6 +10,7 @@ class LP50(base.Component):
     """Calculates the LP50 for a margin of safety analysis."""
     # RELEASES
     VERSION = base.VersionCollection(
+        base.VersionInfo("2.2.7", "2023-09-13"),
         base.VersionInfo("2.2.6", "2023-09-12"),
         base.VersionInfo("2.2.5", "2023-09-11"),
         base.VersionInfo("2.2.4", "2021-12-10"),
@@ -67,6 +68,8 @@ class LP50(base.Component):
     VERSION.changed("2.2.6", "Extended module information for R runtime environment")
     VERSION.added("2.2.6", "Creation of repository info during documentation")
     VERSION.added("2.2.6", "Repository info to R runtime environment")
+    VERSION.changed("2.2.7", "Spatial scale of `Values` input and `LP50` output")
+    VERSION.added("2.2.7", "Unit attribute to `SimulationStart` input")
 
     def __init__(self, name, observer, store):
         """
