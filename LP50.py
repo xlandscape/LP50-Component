@@ -92,14 +92,14 @@ class LP50(base.Component):
                 (
                     attrib.Class(np.ndarray, 1),
                     attrib.Unit("1", 1),
-                    attrib.Scales("time/year, space/base_geometry, other/factor", 1)
+                    attrib.Scales("time/year, space/reach, other/factor", 1)
                 ),
                 self.default_observer,
                 description="The response values to which the regression function is fitted."
             ),
             base.Input(
                 "SimulationStart",
-                (attrib.Class(datetime.date, 1), attrib.Scales("global", 1)),
+                (attrib.Class(datetime.date, 1), attrib.Scales("global", 1), attrib.Unit(None)),
                 self.default_observer,
                 description="The first time step for which values are provided."
             ),
@@ -129,7 +129,7 @@ class LP50(base.Component):
                 "LP50",
                 store,
                 self,
-                {"scales": "time/year, space/base_geometry", "unit": "1"},
+                {"scales": "time/year, space/reach", "unit": "1"},
                 "The calculated LP50 values.",
                 {
                     "type": np.ndarray,
