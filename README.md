@@ -18,16 +18,16 @@
 
 Calculates the LP50 for a margin of safety analysis.  
 This is an automatically generated documentation based on the available code and in-line documentation. The current
-version of this document is from 2023-09-12.
+version of this document is from 2023-09-13.
 
 ### Built with
 
-* Landscape Model core version 1.15.2
+* Landscape Model core version 1.15.3
 * R version 4.1.1 (see `R-4.1.1/README` for details)
 
 ## Getting Started
 
-The component can be used in any Landscape Model based on core version 1.15.2 or newer. See the Landscape
+The component can be used in any Landscape Model based on core version 1.15.3 or newer. See the Landscape
 Model core's `README` for general tips on how to add a component to a Landscape Model.
 
 ### Prerequisites
@@ -81,13 +81,14 @@ Values have to refer to the `global` scale.
 The response values to which the regression function is fitted.
 `Values` expects its values to be of type `ndarray`.
 The physical unit of the `Values` input values is `1`.
-Values have to refer to the `time/year, space/base_geometry, other/factor` scale.
+Values have to refer to the `time/year, space/reach, other/factor` scale.
 
 #### SimulationStart
 
 The first time step for which values are provided.
 `SimulationStart` expects its values to be of type `date`.
 Values have to refer to the `global` scale.
+Values of the `SimulationStart` input may not have a physical unit.
 
 #### MinimumReportValue
 
@@ -118,7 +119,7 @@ Individual array elements have a type of `float`.
 Value representation is in a 2-dimensional array.
 Dimension 1 spans the same years as the [Values](#Values) input.
 Dimension 2 spans the same reaches as the [Values](#Values) input.
-The values apply to the following scale: `time/year, space/base_geometry`.
+The values apply to the following scale: `time/year, space/reach`.
 The physical unit of the values is `1`.
 
 ## Roadmap

@@ -1,6 +1,18 @@
 # Changelog
 
-This is the changelog for the LP50 component. It was automatically created on 2023-09-12.
+This is the changelog for the LP50 component. It was automatically created on 2023-09-13.
+
+## [2.2.7] - 2023-09-13
+
+### Added
+
+- Unit attribute to `SimulationStart` input
+
+### Changed
+
+- Spatial scale of `Values` input and `LP50` output
+
+### Fixed
 
 ## [2.2.6] - 2023-09-12
 
