@@ -1,6 +1,20 @@
 # Changelog
 
-This is the changelog for the LP50 component. It was automatically created on 2023-09-13.
+This is the changelog for the LP50 component. It was automatically created on 2023-09-18.
+
+## [2.2.8] - 2023-09-18
+
+### Added
+
+- Runtime note regarding removal of SimulationStart input
+
+### Changed
+
+- Updated component description
+
+- Updated input descriptions and removed stub descriptions
+
+### Fixed
 
 ## [2.2.7] - 2023-09-13
 

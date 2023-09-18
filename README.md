@@ -16,18 +16,21 @@
 
 ## About the project
 
-Calculates the LP50 for a margin of safety analysis.  
+Calculates the LP50 for a margin of safety analysis. The component uses the `drc` R package to perform a
+log-logistic regression with fixed boundaries of 0 and 1. It reports the effective input for a 50%-response. It
+returns user-defined values in special cases: if all input values for an individual fit are <0.01, if all values
+are >0.99, and if a log-logistic curve could not be fitted.  
 This is an automatically generated documentation based on the available code and in-line documentation. The current
-version of this document is from 2023-09-13.
+version of this document is from 2023-09-18.
 
 ### Built with
 
-* Landscape Model core version 1.15.3
+* Landscape Model core version 1.15.5
 * R version 4.1.1 (see `R-4.1.1/README` for details)
 
 ## Getting Started
 
-The component can be used in any Landscape Model based on core version 1.15.3 or newer. See the Landscape
+The component can be used in any Landscape Model based on core version 1.15.5 or newer. See the Landscape
 Model core's `README` for general tips on how to add a component to a Landscape Model.
 
 ### Prerequisites
@@ -78,14 +81,16 @@ Values have to refer to the `global` scale.
 
 #### Values
 
-The response values to which the regression function is fitted.
+The response values to which the regression function is fitted. To calculate LP50 values, this should be survival for
+different multiplication factors.
 `Values` expects its values to be of type `ndarray`.
 The physical unit of the `Values` input values is `1`.
 Values have to refer to the `time/year, space/reach, other/factor` scale.
 
 #### SimulationStart
 
-The first time step for which values are provided.
+The first time step for which values are provided. This value will be removed in a future version of the `LP50`
+component.
 `SimulationStart` expects its values to be of type `date`.
 Values have to refer to the `global` scale.
 Values of the `SimulationStart` input may not have a physical unit.

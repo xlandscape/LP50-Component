@@ -7,9 +7,15 @@ import datetime
 
 
 class LP50(base.Component):
-    """Calculates the LP50 for a margin of safety analysis."""
+    """
+    Calculates the LP50 for a margin of safety analysis. The component uses the `drc` R package to perform a
+    log-logistic regression with fixed boundaries of 0 and 1. It reports the effective input for a 50%-response. It
+    returns user-defined values in special cases: if all input values for an individual fit are <0.01, if all values
+    are >0.99, and if a log-logistic curve could not be fitted.
+    """
     # RELEASES
     VERSION = base.VersionCollection(
+        base.VersionInfo("2.2.8", "2023-09-18"),
         base.VersionInfo("2.2.7", "2023-09-13"),
         base.VersionInfo("2.2.6", "2023-09-12"),
         base.VersionInfo("2.2.5", "2023-09-11"),
@@ -70,6 +76,9 @@ class LP50(base.Component):
     VERSION.added("2.2.6", "Repository info to R runtime environment")
     VERSION.changed("2.2.7", "Spatial scale of `Values` input and `LP50` output")
     VERSION.added("2.2.7", "Unit attribute to `SimulationStart` input")
+    VERSION.changed("2.2.8", "Updated component description")
+    VERSION.changed("2.2.8", "Updated input descriptions and removed stub descriptions")
+    VERSION.added("2.2.8", "Runtime note regarding removal of SimulationStart input")
 
     def __init__(self, name, observer, store):
         """
@@ -85,44 +94,42 @@ class LP50(base.Component):
         self._inputs = base.InputContainer(self, [
             base.Input(
                 "ProcessingPath",
-                (attrib.Class(str, 1), attrib.Unit(None, 1), attrib.Scales("global", 1)),
+                (attrib.Class(str), attrib.Unit(None), attrib.Scales("global")),
                 self.default_observer,
-                description="""The working directory for the module. It is used for all files prepared as module inputs
-                or generated as (temporary) module outputs."""
+                description="The working directory for the module. It is used for all files prepared as module inputs "
+                            "or generated as (temporary) module outputs."
             ),
             base.Input(
                 "Values",
-                (
-                    attrib.Class(np.ndarray, 1),
-                    attrib.Unit("1", 1),
-                    attrib.Scales("time/year, space/reach, other/factor", 1)
-                ),
+                (attrib.Class(np.ndarray), attrib.Unit("1"), attrib.Scales("time/year, space/reach, other/factor")),
                 self.default_observer,
-                description="The response values to which the regression function is fitted."
+                description="The response values to which the regression function is fitted. To calculate LP50 values, "
+                            "this should be survival for different multiplication factors."
             ),
             base.Input(
                 "SimulationStart",
-                (attrib.Class(datetime.date, 1), attrib.Scales("global", 1), attrib.Unit(None)),
+                (attrib.Class(datetime.date), attrib.Scales("global"), attrib.Unit(None)),
                 self.default_observer,
-                description="The first time step for which values are provided."
+                description="The first time step for which values are provided. This value will be removed in a future "
+                            "version of the `LP50` component."
             ),
             base.Input(
                 "MinimumReportValue",
-                (attrib.Class(float, 1), attrib.Scales("global", 1), attrib.Unit("1")),
+                (attrib.Class(float), attrib.Scales("global"), attrib.Unit("1")),
                 self.default_observer,
-                description="""If no convergence during fitting was achieved because all values were <0.1, this value is
-                reported instead."""
+                description="If no convergence during fitting was achieved because all values were <0.1, this value is "
+                            "reported instead."
             ),
             base.Input(
                 "MaximumReportValue",
-                (attrib.Class(float, 1), attrib.Scales("global", 1), attrib.Unit("1")),
+                (attrib.Class(float), attrib.Scales("global"), attrib.Unit("1")),
                 self.default_observer,
-                description="""If no convergence during fitting was achieved because all values were >0.99, this value
-                is reported instead."""
+                description="If no convergence during fitting was achieved because all values were >0.99, this value "
+                            "is reported instead."
             ),
             base.Input(
                 "ErrorReportValue",
-                (attrib.Class(float, 1), attrib.Scales("global", 1), attrib.Unit("1")),
+                (attrib.Class(float), attrib.Scales("global"), attrib.Unit("1")),
                 self.default_observer,
                 description="If fitting was not possible because an error occurred, this value is reported."
             )
@@ -144,7 +151,12 @@ class LP50(base.Component):
                 }
             )
         ])
-        return
+        if self.default_observer:
+            self.default_observer.write_message(
+                3,
+                "The SimulationStart input will be removed in a future version of the LP50 component",
+                "The simulation offset will be retrieved from the metadata of the Values input"
+            )
 
     def run(self):
         """
