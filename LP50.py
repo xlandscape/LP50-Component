@@ -15,6 +15,7 @@ class LP50(base.Component):
     """
     # RELEASES
     VERSION = base.VersionCollection(
+        base.VersionInfo("2.2.8", "2023-09-18"),
         base.VersionInfo("2.2.7", "2023-09-13"),
         base.VersionInfo("2.2.6", "2023-09-12"),
         base.VersionInfo("2.2.5", "2023-09-11"),
@@ -75,6 +76,9 @@ class LP50(base.Component):
     VERSION.added("2.2.6", "Repository info to R runtime environment")
     VERSION.changed("2.2.7", "Spatial scale of `Values` input and `LP50` output")
     VERSION.added("2.2.7", "Unit attribute to `SimulationStart` input")
+    VERSION.changed("2.2.8", "Updated component description")
+    VERSION.changed("2.2.8", "Updated input descriptions and removed stub descriptions")
+    VERSION.added("2.2.8", "Runtime note regarding removal of SimulationStart input")
 
     def __init__(self, name, observer, store):
         """
