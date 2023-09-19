@@ -15,6 +15,7 @@ class LP50(base.Component):
     """
     # RELEASES
     VERSION = base.VersionCollection(
+        base.VersionInfo("2.2.9", "2023-09-19"),
         base.VersionInfo("2.2.8", "2023-09-18"),
         base.VersionInfo("2.2.7", "2023-09-13"),
         base.VersionInfo("2.2.6", "2023-09-12"),
@@ -79,6 +80,7 @@ class LP50(base.Component):
     VERSION.changed("2.2.8", "Updated component description")
     VERSION.changed("2.2.8", "Updated input descriptions and removed stub descriptions")
     VERSION.added("2.2.8", "Runtime note regarding removal of SimulationStart input")
+    VERSION.changed("2.2.9", "Extended description of LP50 output")
 
     def __init__(self, name, observer, store):
         """
@@ -140,7 +142,9 @@ class LP50(base.Component):
                 store,
                 self,
                 {"scales": "time/year, space/reach", "unit": "1"},
-                "The calculated LP50 values.",
+                "The calculated LP50 values. Some of the values may be reported as stubs to due to the module not "
+                "being able to fit a log-logistic regression ion the input values. See the rest of the documentation "
+                "for more details.",
                 {
                     "type": np.ndarray,
                     "data_type": np.float,
