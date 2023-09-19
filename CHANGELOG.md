@@ -1,6 +1,16 @@
 # Changelog
 
-This is the changelog for the LP50 component. It was automatically created on 2023-09-18.
+This is the changelog for the LP50 component. It was automatically created on 2023-09-19.
+
+## [2.2.9] - 2023-09-19
+
+### Added
+
+### Changed
+
+- Extended description of LP50 output
+
+### Fixed
 
 ## [2.2.8] - 2023-09-18
 
