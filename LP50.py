@@ -140,7 +140,9 @@ class LP50(base.Component):
                 store,
                 self,
                 {"scales": "time/year, space/reach", "unit": "1"},
-                "The calculated LP50 values.",
+                "The calculated LP50 values. Some of the values may be reported as stubs to due to the module not "
+                "being able to fit a log-logistic regression ion the input values. See the rest of the documentation "
+                "for more details.",
                 {
                     "type": np.ndarray,
                     "data_type": np.float,
