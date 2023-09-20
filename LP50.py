@@ -15,6 +15,7 @@ class LP50(base.Component):
     """
     # RELEASES
     VERSION = base.VersionCollection(
+        base.VersionInfo("2.2.10", "2023-09-20"),
         base.VersionInfo("2.2.9", "2023-09-19"),
         base.VersionInfo("2.2.8", "2023-09-18"),
         base.VersionInfo("2.2.7", "2023-09-13"),
@@ -81,6 +82,8 @@ class LP50(base.Component):
     VERSION.changed("2.2.8", "Updated input descriptions and removed stub descriptions")
     VERSION.added("2.2.8", "Runtime note regarding removal of SimulationStart input")
     VERSION.changed("2.2.9", "Extended description of LP50 output")
+    VERSION.changed("2.2.10", "Extended output descriptions")
+    VERSION.changed("2.2.10", "`LP50` output reports reach geometries")
 
     def __init__(self, name, observer, store):
         """

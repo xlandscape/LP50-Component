@@ -21,16 +21,16 @@ log-logistic regression with fixed boundaries of 0 and 1. It reports the effecti
 returns user-defined values in special cases: if all input values for an individual fit are <0.01, if all values
 are >0.99, and if a log-logistic curve could not be fitted.  
 This is an automatically generated documentation based on the available code and in-line documentation. The current
-version of this document is from 2023-09-19.
+version of this document is from 2023-09-20.
 
 ### Built with
 
-* Landscape Model core version 1.15.7
+* Landscape Model core version 1.15.8
 * R version 4.1.1 (see `R-4.1.1/README` for details)
 
 ## Getting Started
 
-The component can be used in any Landscape Model based on core version 1.15.7 or newer. See the Landscape
+The component can be used in any Landscape Model based on core version 1.15.8 or newer. See the Landscape
 Model core's `README` for general tips on how to add a component to a Landscape Model.
 
 ### Prerequisites
@@ -116,17 +116,18 @@ If fitting was not possible because an error occurred, this value is reported.
 Values have to refer to the `global` scale.
 The physical unit of the `ErrorReportValue` input values is `1`.
 
+
 ### Outputs
 #### LP50
-The calculated LP50 values. Some of the values may be reported as stubs to due to the module not being able to fit a log-logistic regression ion the input values. See the rest of the documentation for more details.  
-Values are expectedly of type `ndarray`.
-Individual array elements have a type of `float`.
-Value representation is in a 2-dimensional array.
-Dimension 1 spans the same years as the [Values](#Values) input.
-Dimension 2 spans the same reaches as the [Values](#Values) input.
-The values apply to the following scale: `time/year, space/reach`.
-The physical unit of the values is `1`.
-
+The calculated LP50 values. Some of the values may be reported as stubs to due to the module not being able to fit a log-logistic regression ion the input values. See the rest of the documentation for more details.
+- Scales: `time/year, space/reach`
+- Unit: `1`
+- Type: `numpy.ndarray`
+- Data_Type: `float`
+- Shape: `time/year`: the same years as the [Values](#Values) input, `space/reach`: the same reaches as the [Values](#Values) input
+- Element_Names: `time/year`: None, `space/reach`: according to the `Values` input
+- Offset: `time/year`: the year of the `SimulationStart` input, `space/reach`: None
+- Geometries: `time/year`: None, `space/reach`: according to the `Values` input
 ## Roadmap
 
 The `LP50` component is stable. No further development takes place at the moment.
