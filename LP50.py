@@ -151,7 +151,10 @@ class LP50(base.Component):
                     "shape": (
                         "the same years as the [Values](#Values) input",
                         "the same reaches as the [Values](#Values) input"
-                    )
+                    ),
+                    "element_names": (None, "according to the `Values` input"),
+                    "offset": ("the year of the `SimulationStart` input", None),
+                    "geometries": (None, "according to the `Values` input")
                 }
             )
         ])
@@ -171,10 +174,11 @@ class LP50(base.Component):
         """
         processing_path = self._inputs["ProcessingPath"].read().values
         reaches = self.inputs["Values"].describe()["element_names"][1]
+        geometries = self.inputs["Values"].describe()["geometries"][1]
         simulation_start = self._inputs["SimulationStart"].read().values
         self.prepare_module_inputs(processing_path, reaches.get_values(), simulation_start)
         self.run_module(processing_path)
-        self.read_module_outputs(processing_path, reaches, simulation_start)
+        self.read_module_outputs(processing_path, reaches, simulation_start, geometries)
         return
 
     def prepare_module_inputs(self, processing_path, reaches, simulation_start):
@@ -225,7 +229,13 @@ class LP50(base.Component):
         )
         return
 
-    def read_module_outputs(self, processing_path, reaches, simulation_start):
+    def read_module_outputs(
+            self,
+            processing_path: str,
+            reaches: np.ndarray,
+            simulation_start: datetime.date,
+            geometries: list[bytes]
+    ) -> None:
         """
         Reads the module's outputs and stores them in the Landscape model store.
 
@@ -233,6 +243,7 @@ class LP50(base.Component):
             processing_path: The working directory of the module.
             reaches: The identifiers of the reaches considered.
             simulation_start: The first day of the simulation.
+            geometries: The geometries of the reaches in Well-Known-Byte notation.
 
         Returns:
             Nothing.
@@ -255,5 +266,5 @@ class LP50(base.Component):
             elif value == -999:
                 value = error_report_value
             lp50[time_index, space_index] = value
-        self._outputs["LP50"].set_values(lp50, element_names=(None, reaches), offset=(simulation_start.year, None))
-        return
+        self._outputs["LP50"].set_values(
+            lp50, element_names=(None, reaches), offset=(simulation_start.year, None), geometries=(None, geometries))
