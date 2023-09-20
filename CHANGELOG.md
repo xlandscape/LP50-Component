@@ -1,6 +1,18 @@
 # Changelog
 
-This is the changelog for the LP50 component. It was automatically created on 2023-09-19.
+This is the changelog for the LP50 component. It was automatically created on 2023-09-20.
+
+## [2.2.10] - 2023-09-20
+
+### Added
+
+### Changed
+
+- Extended output descriptions
+
+- `LP50` output reports reach geometries
+
+### Fixed
 
 ## [2.2.9] - 2023-09-19
 
